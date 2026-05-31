@@ -10,15 +10,21 @@ An AI-driven diabetic nutrition assistant powered by Large Language Models (LLM)
 The agent runs an on-demand clinical evaluation utilizing patient context:
 
 ```mermaid
-seqdiagram
-    Patient -> Nutritionist Screen: Enters Food Item (e.g. "Chicken Shawarma")
-    Nutritionist Screen -> PatientProfileService: Fetch Biometrics & Diabetes Type
-    PatientProfileService -> Nutritionist Screen: Profile context injected
-    Nutritionist Screen -> Cloudflare Worker: HTTP POST (Food Name + Lang + Patient Context)
-    Cloudflare Worker -> Llama 3.3 (70B): System prompts + Patient context + Food query
-    Llama 3.3 (70B) -> Cloudflare Worker: Formulates clinical response
-    Cloudflare Worker -> Nutritionist Screen: returns FoodResponse (JSON)
-    Nutritionist Screen -> Patient: Renders Suitability Badge + Markdown Message
+sequenceDiagram
+    participant Patient
+    participant NS as Nutritionist Screen
+    participant PPS as PatientProfileService
+    participant CW as Cloudflare Worker
+    participant L as Llama 3.3 (70B)
+
+    Patient->>NS: Enters Food Item (e.g. "Chicken Shawarma")
+    NS->>PPS: Fetch Biometrics & Diabetes Type
+    PPS->>NS: Profile context injected
+    NS->>CW: HTTP POST (Food Name + Lang + Patient Context)
+    CW->>L: System prompts + Patient context + Food query
+    L->>CW: Formulates clinical response
+    CW->>NS: returns FoodResponse (JSON)
+    NS->>Patient: Renders Suitability Badge + Markdown Message
 ```
 
 ### 2. Clinical Evaluation Guidelines
