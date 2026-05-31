@@ -52,37 +52,27 @@ A doctor referral warning is triggered (`referralFlag = true`) under either clin
 
 ## 🛠️ Code Structure
 
-- [weekly_deficiency_spotter_service.dart](file:///d:/sms.doc/models-code/weekly_coach/weekly_deficiency_spotter_service.dart): Core engine running the weekly clinical analysis and mapping suggestions.
-- [weekly_deficiency_spotter_page.dart](file:///d:/sms.doc/models-code/weekly_coach/weekly_deficiency_spotter_page.dart): A Flutter dashboard card UI displaying:
+- [weekly_deficiency_spotter_service.dart](file:///d:/sms.doc/models-code/04_weekly_coach/weekly_deficiency_spotter_service.dart): Core engine running the weekly clinical analysis and mapping suggestions.
+- [weekly_deficiency_spotter_page.dart](file:///d:/sms.doc/models-code/04_weekly_coach/weekly_deficiency_spotter_page.dart): A Flutter dashboard card UI displaying:
   - Weekly overall summary.
   - Interactive grid showing coverage levels and bands for all 10 nutrients.
   - Actionable deficiency cards with clinical impact statements and suggested foods.
   - Interlocking biochemical interaction banners.
   - Highlighted medical referral warnings.
-- [weekly_deficiency_spotter_test.dart](file:///d:/sms.doc/models-code/weekly_coach/weekly_deficiency_spotter_test.dart): Unit tests covering classification bands, RDI, recurrence tracking, and doctor referrals.
 
 ---
 
 ## 🚀 How to Integrate
 
-1. **Required Stubs**:
-   This module integrates with the following shared app services:
-   - [daily_log.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/models/daily_log.dart)
-   - [meal_entry.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/models/meal_entry.dart)
-   - [diet_storage_service.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/services/diet_storage_service.dart)
-   - [patient_profile_service.dart](file:///d:/sms.doc/models-code/services/patient_profile_service.dart)
+1. **Required Shared Services**:
+   This module integrates with the following shared app services (relative to the feature directory):
+   - `../../patient/diseases/diet_plan/models/daily_log.dart`
+   - `../../patient/diseases/diet_plan/models/meal_entry.dart`
+   - `../../patient/diseases/diet_plan/services/diet_storage_service.dart`
+   - `../../services/patient_profile_service.dart`
 
 2. **Displaying the Page**:
    Simply navigate to or include the `WeeklyDeficiencySpotterPage` in your weekly report tab:
    ```dart
    const WeeklyDeficiencySpotterPage()
    ```
-
----
-
-## 🧪 Verification
-
-To run unit tests:
-```bash
-dart run weekly_coach/weekly_deficiency_spotter_test.dart
-```

@@ -23,11 +23,10 @@ Estimated HbA1c values are categorized according to the American Diabetes Associ
 
 ## 🛠️ Code Structure
 
-- [hba1c_estimator.dart](file:///d:/sms.doc/models-code/hba1c_estimator/hba1c_estimator.dart): Core feature file containing:
+- [hba1c_estimator.dart](file:///d:/sms.doc/models-code/05_hba1c_estimator/hba1c_estimator.dart): Core feature file containing:
   - **Clinical Helper Functions**: `mbgToHbA1c` and `interpretHbA1c`.
   - **Data Persistence**: Uses `shared_preferences` to persist glucose readings locally as a JSON string under the key `hba1c_glucose_readings`.
   - **UI Widget (`HbA1cEstimatorScreen`)**: A modern, clean, responsive Flutter page styled with Slate/Slate-900 typography, featuring a dashboard showing estimated HbA1c, interpretation tags, a glucose entry input field, validation rules, and an entry history log.
-- [hba1c_estimator_test.dart](file:///d:/sms.doc/models-code/hba1c_estimator/hba1c_estimator_test.dart): Self-contained unit tests asserting mathematical precision and ADA categorization correctness.
 
 ---
 
@@ -49,12 +48,3 @@ Estimated HbA1c values are categorized according to the American Diabetes Associ
      MaterialPageRoute(builder: (context) => const HbA1cEstimatorScreen()),
    );
    ```
-
----
-
-## 🧪 Verification
-
-To run unit tests:
-```bash
-dart run hba1c_estimator/hba1c_estimator_test.dart
-```

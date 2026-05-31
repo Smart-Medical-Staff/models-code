@@ -44,13 +44,12 @@ The target calorie budget is converted to gram values based on:
 
 ## 🛠️ Code Structure
 
-- [nutrition_tracker.dart](file:///d:/sms.doc/models-code/nutrition_tracker/nutrition_tracker.dart): Core feature file containing:
+- [nutrition_tracker.dart](file:///d:/sms.doc/models-code/01_nutrition_tracker/nutrition_tracker.dart): Core feature file containing:
   - **Models**: `FoodItem` (nutrient components per 100g), `UserProfile`, `MealEntry` (tracks grams consumed), and `DailyLog`.
   - **Food Database**: Incorporates a built-in search index of **~512 foods** (embedded in source text) and custom food registry.
   - **Storage Manager**: Persists user profiles, food lists, and logs in `shared_preferences`.
   - **Interactive UI (`NutritionTrackerScreen`)**: A dashboard featuring progress indicators, meal categorizations, search sheets, and food logging menus.
-- [FINAL_VALIDATED_FOOD_DATAv1.csv](file:///d:/sms.doc/models-code/nutrition_tracker/FINAL_VALIDATED_FOOD_DATAv1.csv): Validated database of food items containing complete macro and micro-nutrients per 100g.
-- [nutrition_tracker_test.dart](file:///d:/sms.doc/models-code/nutrition_tracker/nutrition_tracker_test.dart): Unit tests asserting calorie targets, meal limits, and search logic.
+- [FINAL_VALIDATED_FOOD_DATAv1.csv](file:///d:/sms.doc/models-code/01_nutrition_tracker/FINAL_VALIDATED_FOOD_DATAv1.csv): Validated database of food items containing complete macro and micro-nutrients per 100g.
 
 ---
 
@@ -71,12 +70,3 @@ The target calorie budget is converted to gram values based on:
      MaterialPageRoute(builder: (context) => const NutritionTrackerScreen()),
    );
    ```
-
----
-
-## 🧪 Verification
-
-To run unit tests:
-```bash
-dart run nutrition_tracker/nutrition_tracker_test.dart
-```

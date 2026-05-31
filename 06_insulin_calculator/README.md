@@ -37,12 +37,11 @@ $$\text{Total Bolus} = \text{Meal Bolus} + \text{Correction Bolus}$$
 
 ## 🛠️ Code Structure
 
-- [insulin_calculator.dart](file:///d:/sms.doc/models-code/insulin_calculator/insulin_calculator.dart): Core feature file containing:
+- [insulin_calculator.dart](file:///d:/sms.doc/models-code/06_insulin_calculator/insulin_calculator.dart): Core feature file containing:
   - **Clinical Models**: `UserProfile` (stores demographic and clinical ratios) and `DoseLog`/`DailyData` (stores dose events).
   - **Calculation Functions**: `buildProfileFromWeight`, `adjustBasalDose`, and `calculateBolus`.
   - **Storage Manager**: Persists user profiles under key `insulin_user_profile` and daily logs under key `insulin_daily_data` via `shared_preferences`.
   - **Dashboard & UI Widget (`InsulinCalculatorScreen`)**: A premium UI styled in dark-slate and royal blue that lets users set up profiles, track daily logs, calculate bolus doses, adjust basal doses, and view daily summaries.
-- [insulin_calculator_test.dart](file:///d:/sms.doc/models-code/insulin_calculator/insulin_calculator_test.dart): Unit tests covering profile generation, basal adjustment, and bolus calculation engine.
 
 ---
 
@@ -63,12 +62,3 @@ $$\text{Total Bolus} = \text{Meal Bolus} + \text{Correction Bolus}$$
      MaterialPageRoute(builder: (context) => const InsulinCalculatorScreen()),
    );
    ```
-
----
-
-## 🧪 Verification
-
-To run unit tests:
-```bash
-dart run insulin_calculator/insulin_calculator_test.dart
-```

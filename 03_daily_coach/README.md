@@ -52,36 +52,26 @@ The service composes a friendly, concise, 4-sentence coaching narrative structur
 
 ## 🛠️ Code Structure
 
-- [daily_nutrition_coach_service.dart](file:///d:/sms.doc/models-code/daily_coach/daily_nutrition_coach_service.dart): Core engine running the coaching evaluation pipeline.
-- [daily_nutrition_coach_page.dart](file:///d:/sms.doc/models-code/daily_coach/daily_nutrition_coach_page.dart): A Flutter dashboard card displaying:
+- [daily_nutrition_coach_service.dart](file:///d:/sms.doc/models-code/03_daily_coach/daily_nutrition_coach_service.dart): Core engine running the coaching evaluation pipeline.
+- [daily_nutrition_coach_page.dart](file:///d:/sms.doc/models-code/03_daily_coach/daily_nutrition_coach_page.dart): A Flutter dashboard card displaying:
   - Narrative coaching message.
   - Linear progress indicators for target vs. actual macro consumption.
   - Interactive details on primary deviations and suggested food swaps.
-- [daily_nutrition_coach_test.dart](file:///d:/sms.doc/models-code/daily_coach/daily_nutrition_coach_test.dart): Unit tests covering empty logs, perfect day coaching, macro deviations, and tracing logic.
 
 ---
 
 ## 🚀 How to Integrate
 
-1. **Required Stubs**:
-   This module integrates with the following shared app services (which can be mock-implemented as in the tests):
-   - [daily_log.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/models/daily_log.dart)
-   - [meal_entry.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/models/meal_entry.dart)
-   - [diet_calculator.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/services/diet_calculator.dart)
-   - [patient_profile_service.dart](file:///d:/sms.doc/models-code/services/patient_profile_service.dart)
-   - [diet_storage_service.dart](file:///d:/sms.doc/models-code/patient/diseases/diet_plan/services/diet_storage_service.dart)
+1. **Required Shared Services**:
+   This module integrates with the following shared app services (relative to the feature directory):
+   - `../../patient/diseases/diet_plan/models/daily_log.dart`
+   - `../../patient/diseases/diet_plan/models/meal_entry.dart`
+   - `../../patient/diseases/diet_plan/services/diet_calculator.dart`
+   - `../../services/patient_profile_service.dart`
+   - `../../patient/diseases/diet_plan/services/diet_storage_service.dart`
 
 2. **Displaying the Page**:
    Simply navigate to or include the `DailyNutritionCoachPage` in your diet or dashboard tabs:
    ```dart
    const DailyNutritionCoachPage()
    ```
-
----
-
-## 🧪 Verification
-
-To run unit tests:
-```bash
-dart run daily_coach/daily_nutrition_coach_test.dart
-```
