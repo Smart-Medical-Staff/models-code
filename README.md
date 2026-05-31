@@ -28,11 +28,13 @@ models-code/
 │   └── hba1c_estimator.dart
 ├── 06_insulin_calculator/     # Weight-based profile build & dose calculator
 │   └── insulin_calculator.dart
-└── 07_neuropathy/             # Diabetic neuropathy clinical & ML scoring notebooks
-    ├── NDS(1).ipynb
-    ├── NSS.ipynb
-    ├── diabetic neuropathy(90)code.ipynb
-    └── final_decision.ipynb
+├── 07_neuropathy/             # Diabetic neuropathy clinical & ML scoring notebooks
+│   ├── NDS(1).ipynb
+│   ├── NSS.ipynb
+│   ├── diabetic neuropathy(90)code.ipynb
+│   └── final_decision.ipynb
+└── 08_gingivitis/             # Gum health diagnostic & clinical simulator notebook
+    └── Gingivitis.ipynb
 ```
 
 ---
@@ -60,3 +62,6 @@ models-code/
 
 ### 7. [Diabetic Neuropathy Assessment](file:///d:/sms.doc/models-code/07_neuropathy/README.md)
 * **Clinical Purpose**: Assesses Painful Diabetic Neuropathy (PDN) by calculating patient-reported symptoms (NSS questionnaire) and physical examination scores (NDS sensory/motor examination), and applies a weighted voting model combined with a Random Forest Classifier to provide a final diagnostic verdict.
+
+### 8. [Virtual Gum Health Analyzer](file:///d:/sms.doc/models-code/08_gingivitis/README.md)
+* **Clinical Purpose**: Evaluates patient gum health based on standard periodontal indicators (gingival color, bleeding slider, edema, and tartar deposits) plus halitosis and smoking statuses, computing a weighted severity score and generating custom clinical recommendations.
