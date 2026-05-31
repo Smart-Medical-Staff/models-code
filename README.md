@@ -26,8 +26,13 @@ models-code/
 │   └── weekly_deficiency_spotter_service.dart
 ├── 05_hba1c_estimator/        # HbA1c Estimator Screen & logic
 │   └── hba1c_estimator.dart
-└── 06_insulin_calculator/      # Weight-based profile build & dose calculator
-    └── insulin_calculator.dart
+├── 06_insulin_calculator/     # Weight-based profile build & dose calculator
+│   └── insulin_calculator.dart
+└── 07_neuropathy/             # Diabetic neuropathy clinical & ML scoring notebooks
+    ├── NDS(1).ipynb
+    ├── NSS.ipynb
+    ├── diabetic neuropathy(90)code.ipynb
+    └── final_decision.ipynb
 ```
 
 ---
@@ -52,3 +57,6 @@ models-code/
 
 ### 6. [Insulin Dose Calculator & Tracker](file:///d:/sms.doc/models-code/06_insulin_calculator/README.md)
 * **Clinical Purpose**: Automatically generates a diabetic profile (TDD, ICR, ISF) based on weight and diabetes type, recalculates all parameters dynamically upon basal dose adjustment, and calculates quick-acting bolus insulin for meals and glucose corrections.
+
+### 7. [Diabetic Neuropathy Assessment](file:///d:/sms.doc/models-code/07_neuropathy/README.md)
+* **Clinical Purpose**: Assesses Painful Diabetic Neuropathy (PDN) by calculating patient-reported symptoms (NSS questionnaire) and physical examination scores (NDS sensory/motor examination), and applies a weighted voting model combined with a Random Forest Classifier to provide a final diagnostic verdict.
