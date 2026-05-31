@@ -33,8 +33,38 @@ models-code/
 │   ├── NSS.ipynb
 │   ├── diabetic neuropathy(90)code.ipynb
 │   └── final_decision.ipynb
-└── 08_gingivitis/             # Gum health diagnostic & clinical simulator notebook
-    └── Gingivitis.ipynb
+├── 08_gingivitis/             # Gum health diagnostic & clinical simulator notebook
+│   └── Gingivitis.ipynb
+└──  09_multi_agent_rag/          # Clinical reasoning, RAG, orchestration & AI diagnostics
+    ├── requirements.txt
+    │
+    ├── core/
+    │   ├── questionnaire.py
+    │   ├── rag_engine.py
+    │   ├── tools.py
+    │   ├── database/
+    │   ├── repositories/
+    │   ├── services/
+    │   ├── workflows/
+    │   ├── schemas/
+    │   ├── models/
+    │   └── utils/
+    │
+    ├── database/
+    │   ├── schema.sql
+    │   └── supabase/
+    │
+    ├── multi_agent/
+    │   ├── agents.py
+    │   ├── graph.py
+    │   ├── memory.py
+    │   ├── state.py
+    │   ├── runtime_guard.py
+    │   └── runtime_health.py
+    │
+    └── tools/
+        ├── ppg_tool.py
+        └── signal_quality_tool.py
 ```
 
 ---
@@ -65,3 +95,6 @@ models-code/
 
 ### 8. [Virtual Gum Health Analyzer](file:///d:/sms.doc/models-code/08_gingivitis/README.md)
 * **Clinical Purpose**: Evaluates patient gum health based on standard periodontal indicators (gingival color, bleeding slider, edema, and tartar deposits) plus halitosis and smoking statuses, computing a weighted severity score and generating custom clinical recommendations.
+
+### 9. [Multi-Agent RAG Orchestration](file:///d:/sms.doc/models-code/09_Multi_Agent_RAG/README.md)
+* **Clinical Purpose**: Provides a centralized AI reasoning framework that combines Retrieval-Augmented Generation (RAG), multi-agent orchestration, clinical workflows, patient memory, and machine-learning diagnostic services. The platform coordinates disease screening, risk stratification, signal analysis, and personalized clinical guidance across multiple medical domains while maintaining explainability and auditability.
